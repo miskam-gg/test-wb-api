@@ -17,6 +17,7 @@
 "cp .env.example .env"
 
 *Параметры подключения к БД:*
+
 DB_CONNECTION=mysql
 
 DB_HOST=localhost
@@ -57,15 +58,19 @@ EXTERNAL_API_INCOMES_URL=http://109.73.206.144:6969/api/incomes
 **Загрузка данных из API:**
 
 После запуска проекта, используются команды, для загрузки данных:
+
 *Заказы:*
 
 "docker-compose exec app php artisan fetch:orders 2025-03-01 2025-03-31 --page=1 --limit=500"
+
 *Продажи:*
 
 "docker-compose exec app php artisan fetch:sales 2025-03-01 2025-03-31 --page=1 --limit=500"
+
 *Склады:*
 
 "docker-compose exec app php artisan fetch:stocks 2025-03-24 --page=1 --limit=500"
+
 *Доходы:*
 
 "docker-compose exec app php artisan fetch:incomes 2025-03-01 2025-03-31 --page=1 --limit=500"
